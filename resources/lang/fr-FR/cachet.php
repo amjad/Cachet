@@ -23,6 +23,8 @@ return [
         'group' => [
             'other' => 'Autres composants',
         ],
+        'select_all'   => 'Select All',
+        'deselect_all' => 'Deselect All',
     ],
 
     // Incidents
@@ -30,9 +32,10 @@ return [
         'none'         => 'Aucun incident signalé',
         'past'         => 'Incidents antérieurs',
         'stickied'     => 'Incidents épinglés',
-        'scheduled'    => 'Maintenance Planifiée',
+        'scheduled'    => 'Maintenance',
         'scheduled_at' => ', planifé à :timestamp',
         'posted'       => 'Posté à :timestamp',
+        'posted_at'    => 'Posted at :timestamp',
         'status'       => [
             1 => 'Enquête en cours',
             2 => 'Identifié',
@@ -52,9 +55,9 @@ return [
 
     // Service Status
     'service' => [
-        'good'  => '[0,1] Système opérationnel|[2,Inf] Tous les systèmes sont opérationnels',
-        'bad'   => '[0,1] Le système rencontre actuellement des problèmes|[2,Inf] Certains systèmes rencontrent des problèmes',
-        'major' => '[0,1] Le service rencontre une panne majeure|[2,Inf] Certains systèmes rencontrent une panne majeure',
+        'good'  => '[0,1]System operational|[2,*]All systems are operational',
+        'bad'   => '[0,1]The system is experiencing issues|[2,*]Some systems are experiencing issues',
+        'major' => '[0,1]The system is experiencing major issues|[2,*]Some systems are experiencing major issues',
     ],
 
     'api' => [
@@ -74,12 +77,17 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'   => 'Abonnez-vous pour obtenir les dernières mises à jour.',
-        'unsubscribe' => 'Se désinscrire par :link',
-        'button'      => 'S\'abonner',
-        'manage'      => [
-            'no_subscriptions' => 'Vous êtes actuellement abonné à toutes les mises à jour.',
-            'my_subscriptions' => 'Vous êtes actuellement abonné aux mises à jour suivantes.',
+        'subscribe'           => 'Subscribe to status changes and incident updates',
+        'unsubscribe'         => 'Unsubscribe',
+        'button'              => 'S\'abonner',
+        'manage_subscription' => 'Manage subscription',
+        'manage'              => [
+            'notifications'       => 'Notifications',
+            'notifications_for'   => 'Manage notifications for',
+            'no_subscriptions'    => 'Vous êtes actuellement abonné à toutes les mises à jour.',
+            'update_subscription' => 'Update Subscription',
+            'my_subscriptions'    => 'Vous êtes actuellement abonné aux mises à jour suivantes.',
+            'manage_at_link'      => 'Manage your subscriptions at :link',
         ],
         'email' => [
             'subscribe'          => 'S\'abonner aux notifications par email.',
@@ -97,7 +105,7 @@ return [
         'title'    => 'Inscription',
         'username' => 'Nom d\'utilisateur',
         'email'    => 'Adresse e-mail',
-        'password' => 'Mot de passe ',
+        'password' => 'Mot de passe',
         'success'  => 'Votre compte a été créé.',
         'failure'  => 'Un problème est survenu lors de votre inscription.',
     ],
@@ -116,9 +124,18 @@ return [
         ],
     ],
 
+    // Meta descriptions
+    'meta' => [
+        'description' => [
+            'incident'  => 'Details and updates about the :name incident that occurred on :date',
+            'schedule'  => 'Details about the scheduled maintenance period :name starting :startDate',
+            'subscribe' => 'Subscribe to :app in order to receive updates of incidents and scheduled maintenance periods',
+            'overview'  => 'Restez à jour avec les dernières mises à jour de :app.',
+        ],
+    ],
+
     // Other
     'home'            => 'Accueil',
-    'description'     => 'Restez à jour avec les dernières mises à jour de :app.',
     'powered_by'      => 'Propulsé par <a href="https://cachethq.io">Cachet</a>.',
     'timezone'        => 'Les heures sont affichées avec le fuseau horaire :timezone.',
     'about_this_site' => 'À propos du site',

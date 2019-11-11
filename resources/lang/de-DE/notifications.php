@@ -32,11 +32,11 @@ return [
             'mail' => [
                 'subject'  => 'Neuer Vorfall gemeldet',
                 'greeting' => 'Ein neuer Vorfall wurde auf der :app_name Status Seite gemeldet.',
-                'content'  => 'Vorfall: Name wurde gemeldet',
+                'content'  => 'Vorfall :name wurde gemeldet',
                 'action'   => 'Anzeigen',
             ],
             'slack' => [
-                'title'   => 'Vorfall: :name wurde gemeldet',
+                'title'   => 'Vorfall :name gemeldet',
                 'content' => 'Ein neuer Vorfall wurde auf der :app_name Status Seite gemeldet',
             ],
             'sms' => [
@@ -51,7 +51,7 @@ return [
                 'action'  => 'Anzeigen',
             ],
             'slack' => [
-                'title'   => ':name wurde aktualisiert',
+                'title'   => ':name aktualisiert',
                 'content' => ':name wurde auf :new_status aktualisiert',
             ],
             'sms' => [
@@ -68,7 +68,7 @@ return [
                 'action'  => 'Anzeigen',
             ],
             'slack' => [
-                'title'   => 'Neuer wurde Zeitplan erstellt!',
+                'title'   => 'Neuer Zeitplan erstellt!',
                 'content' => ':name wurde für :date geplant',
             ],
             'sms' => [
@@ -99,8 +99,8 @@ return [
         'invite' => [
             'mail' => [
                 'subject' => 'Ihre Einladung wartet auf Sie...',
-                'content' => 'Sie wurden eingeladen um der :app_name Statusseite beizutreten.',
-                'title'   => 'Sie wurden eingeladen um der :app_name Statusseite beizutreten.',
+                'content' => 'Sie wurden eingeladen, um der :app_name Statusseite beizutreten.',
+                'title'   => 'Sie sind dazu eingeladen, der :app_name Statusseite beizutreten.',
                 'action'  => 'Akzeptieren',
             ],
         ],
